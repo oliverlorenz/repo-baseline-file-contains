@@ -1,21 +1,30 @@
 {
   "name": "repo-baseline-file-contains",
-  "version": "1.0.2",
+  "version": "0.0.0-development",
   "description": "",
   "main": "src/index.js",
   "directories": {
     "test": ""
   },
   "scripts": {
-    "test": "mocha --recursive test/"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "semantic-release": "^15.10.8",
+    "travis-deploy-once": "^5.0.9"
   },
   "dependencies": {
-    "bluebird": "^3.5.3"
+    "bluebird": "^3.5.3",
+    "repo-baseline-ruleset-plugins": "0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oliverlorenz/repo-baseline-file-contains.git"
   }
 }
