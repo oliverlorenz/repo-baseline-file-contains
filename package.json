@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "bluebird": "^3.5.3",
-    "repo-baseline-ruleset-plugins": "0.0.1"
+    "repo-baseline-ruleset-plugins": "0.1.0"
   },
   "repository": {
     "type": "git",
