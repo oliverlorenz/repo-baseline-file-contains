@@ -16,12 +16,12 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
+    "repo-baseline-ruleset-plugins": "0.0.1",
     "semantic-release": "^15.10.8",
     "travis-deploy-once": "^5.0.9"
   },
   "dependencies": {
-    "bluebird": "^3.5.3",
-    "repo-baseline-ruleset-plugins": "0.0.1"
+    "bluebird": "^3.5.3"
   },
   "repository": {
     "type": "git",
