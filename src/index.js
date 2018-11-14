@@ -19,7 +19,7 @@ module.exports = function(pluginManager, repoPath, config) {
 
             if (fileToCheck.pattern) {
                 const regex = new RegExp(fileToCheck.pattern, 'gm');
-                callback(`"${fileToCheck.path}" includes "${fileToCheck.pattern}"`, regex.test(fileContent))
+                callback(`"${fileToCheck.path}" includes "${fileToCheck.pattern}"`, regex.test(fileContent), level)
             } else if (fileToCheck.string) {
                 callback(`"${fileToCheck.path}" includes "${fileToCheck.string}"`, fileContent.indexOf(fileToCheck.string) !== -1, level)
             }

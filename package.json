@@ -17,7 +17,7 @@
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "repo-baseline-ruleset-plugins": "0.0.1",
-    "semantic-release": "^15.10.8",
+    "semantic-release": "^15.11.0",
     "travis-deploy-once": "^5.0.9"
   },
   "dependencies": {
@@ -25,6 +25,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oliverlorenz/repo-baseline-file-contains.git" 
+    "url": "https://github.com/oliverlorenz/repo-baseline-file-contains.git"
   }
 }

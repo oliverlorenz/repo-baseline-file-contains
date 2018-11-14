@@ -1,5 +1,6 @@
 
 const plugin = require('../../../src/index.js');
+const { expect } = require('chai');
 
 describe(__filename, () => {
     const pluginManager = {};
@@ -15,14 +16,14 @@ describe(__filename, () => {
             ]
         };
 
-        plugin(pluginManager, repoPath).run((message, isValid) => {
+        plugin(pluginManager, repoPath).run((message, isValid, level) => {
             if (isValid) {
                 done()
             } else {
                 done(`${options.files[0].pattern} not found!`);
             }
         }, 0, options)
-    })
+    })  
 
     it('should find a string in a file', (done) => {
         const options = { 
@@ -42,5 +43,23 @@ describe(__filename, () => {
             }
         }, 0, options)
     
+    })
+    
+    it('callback function should contain a level', (done) => {
+        const options = { 
+            files: [
+                {
+                    path: 'file.txt',
+                    pattern: "check\ me!"
+                }
+            ]
+        };
+
+        const expectedLevelinMessage = 55
+
+        plugin(pluginManager, repoPath).run((message, isValid, level) => {
+            expect(level).equals(expectedLevelinMessage)
+            done()
+        }, expectedLevelinMessage, options)
     })
 })
